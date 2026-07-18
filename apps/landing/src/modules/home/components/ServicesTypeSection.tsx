@@ -13,7 +13,7 @@ const ServicesTypeSection = () => {
                 return (
                     <main
                         key={index}
-                        className='w-167.5 h-61 rounded-md self-start' 
+                        className='w-120 h-61 rounded-md self-' 
                         style={{backgroundImage: `url(${bgImage})`}}>
 
                     </main>

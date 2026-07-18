@@ -2,7 +2,7 @@ import aboutPic from '@/assets/images/House.jpeg'
 
 const AboutSection = () => {
   return (
-    <section className="w-[90%] mx-auto flex mt-16 gap-x-20 items-start justify-between">
+    <section className="mx-auto flex mt-16 gap-x-20 items-start justify-between bg-[#f5f7fa]">
       {/* main image section */}
       <img
         className='w-121.75 h-78.74 object-cover rounded-md' 

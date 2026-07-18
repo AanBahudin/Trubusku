@@ -4,7 +4,7 @@ import type { LucideIcon } from 'lucide-react'
 
 const ServicesSection = () => {
   return (
-    <Wrapper className='my-10'>
+    <Wrapper className='w-full my-10'>
         {/* title section */}
         <section className='w-full flex justify-between items-center'>
             {/* left title */}
@@ -22,12 +22,18 @@ const ServicesSection = () => {
             {servicesData.map((item, index) => {
                 const Icon : LucideIcon = item.icon
                 return (
-                    <section key={index} className='w-71 h-78.75 rounded-xl mt-10 bg-[#FAFAFA] flex flex-col items-start justify-center px-6 py-8'>
-                        <div className='p-2 rounded-md bg-green-500'>
-                            <Icon size={30} className='stroke-green-900' />
+                    <section key={index} className="group w-71 h-78.75 rounded-2xl bg-white mt-10 flex flex-col items-start justify-center px-6 py-8 border border-slate-200 transition-all duration-200 hover:border-green-600 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(34,197,94,0.25)]">
+                        <div className="p-2 rounded-md bg-green-500/30">
+                            <Icon size={30} className="stroke-green-900" />
                         </div>
-                        <h1 className='text-xl text-zinc-800 font-semibold my-2'>{item.title}</h1>
-                        <p className='text-[14px] leading-relaxed text-zinc-500'>{item.text}</p>
+
+                        <h1 className="text-xl text-zinc-800 font-semibold my-2 group-hover:text-green-300 duration-200">
+                            {item.title}
+                        </h1>
+
+                        <p className="text-[14px] leading-relaxed text-zinc-500">
+                            {item.text}
+                        </p>
                     </section>
                 )
             })}

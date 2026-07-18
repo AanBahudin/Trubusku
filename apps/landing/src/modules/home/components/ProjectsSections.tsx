@@ -8,7 +8,7 @@ const ProjectsSections = () => {
         <section className='grid grid-cols-2 grid-rows-2 gap-6'>
             {Array.from({length: 4}).map((_, index) => {
                 return (
-                    <img className='rounded-xl w-96 h-69' src={Img} alt="project image" key={index} />
+                    <img className='rounded-xl w-80 h-70r object-cover' src={Img} alt="project image" key={index} />
                 )
             })}
         </section>
