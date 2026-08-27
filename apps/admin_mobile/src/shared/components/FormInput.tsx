@@ -1,15 +1,17 @@
 import { StyleSheet, TextInput, type TextInputProps, View } from 'react-native'
-import {Eye, type LucideIcon} from 'lucide-react-native'
+import {Eye, EyeClosed, type LucideIcon} from 'lucide-react-native'
 import { Colors } from '@/themes/Colors'
 import { FontsWeightConfig } from '@/constants/font_config'
 import { useState } from 'react'
+import Button from './Button'
 
 interface FormInputProps extends TextInputProps {
     isPass?: boolean,
-    Icon?: LucideIcon
+    Icon?: LucideIcon,
+    errMsg?: string
 }
 
-const FormInput = ({isPass=false, Icon, ...props} : FormInputProps) => {
+const FormInput = ({isPass=false, Icon, errMsg="", ...props} : FormInputProps) => {
 
     const [isFocus, setFocus] = useState<boolean>(false)
     const [showPass, setShowPass] = useState<boolean>(false)
@@ -17,8 +19,12 @@ const FormInput = ({isPass=false, Icon, ...props} : FormInputProps) => {
     return (
         <View style={styles.container}>
             {Icon && <Icon style={styles.icon} size={20} stroke={Colors.secondary[700]} />}
-            <TextInput style={styles.form} {...props} />
-            {isPass && <Eye style={styles.icon} size={20} stroke={Colors.secondary[700]} />}
+            <TextInput style={styles.form} {...props} secureTextEntry={showPass} />
+            {isPass && (
+                <Button onPress={() => setShowPass(!showPass)}>
+                    {showPass ? <EyeClosed style={styles.icon} size={20} stroke={Colors.secondary[700]} /> : <Eye style={styles.icon} size={20} stroke={Colors.secondary[700]} />}
+                </Button>
+            )}
         </View>
     )
 }
