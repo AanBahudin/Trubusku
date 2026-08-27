@@ -1,9 +1,7 @@
 import { LoginPage } from "@/modules/auth/pages"
 
 const login = () => {
-  return (
-    <LoginPage />
-  )
+  return <LoginPage />
 }
 
 export default login
