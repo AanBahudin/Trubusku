@@ -1,0 +1,1 @@
+export const menuList = ['produk', 'layanan', 'kontak', 'klien', 'portfolio', 'galeri']

@@ -4,40 +4,37 @@ import type { LucideIcon } from 'lucide-react'
 
 const ServicesSection = () => {
   return (
-    <Wrapper className='w-full my-10'>
-        {/* title section */}
-        <section className='w-full flex justify-between items-center'>
-            {/* left title */}
-            <main>
-                <h2 className='text-2xl text-zinc-800'>Pilihan Terbaik Konsumen</h2>
-                <h2 className='text-4xl font-bold text-zinc-800'>Kami Selalu Menjaga dan Merawat</h2>
-            </main>
+    <Wrapper className='w-full lg:w-full bg-background pt-20 pb-40'>
+        <Wrapper>
+            <section className='w-full flex justify-between items-center'>
+                <main>
+                    <h2 className='text-2xl text-primary-700'>Solusi Hijau Terbaik Untuk Anda</h2>
+                    <h2 className='text-3xl lg:text-4xl font-bold text-primary-900'>Kami Hadir Menghadirkan Keindahan Alam di Setiap Ruang</h2>
+                </main>
+            </section>
 
-            {/* right title */}
-            <p className='w-125 text-[16px] text-zinc-800 text-right leading-relaxed'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure reprehenderit eos qui maxime iste! Quidem repellendus eos ipsa voluptates accusantium.</p>
-        </section>
+            {/* card section */}
+            <section className='w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 lg:grid-row-2 grid-flow-row-dense gap-4 mt-10'>
+                {servicesData.map((item, index) => {
+                    const Icon : LucideIcon = item.icon
+                    return (
+                        <section key={index} className="group place-self-auto sha rounded-3xl bg-white flex flex-col items-start justify-start px-6 py-8 border border-slate-200 transition-all duration-150 hover:border-primary-400 hover:-translate-y-1 hover:shadow-2xl">
+                            <div className="p-3 rounded-2xl bg-primary-300/50">
+                                <Icon size={30} className="stroke-primary-700" />
+                            </div>
 
-        {/* card section */}
-        <section className='w-full flex items-center justify-between'>
-            {servicesData.map((item, index) => {
-                const Icon : LucideIcon = item.icon
-                return (
-                    <section key={index} className="group w-71 h-78.75 rounded-2xl bg-white mt-10 flex flex-col items-start justify-center px-6 py-8 border border-slate-200 transition-all duration-200 hover:border-green-600 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(34,197,94,0.25)]">
-                        <div className="p-2 rounded-md bg-green-500/30">
-                            <Icon size={30} className="stroke-green-900" />
-                        </div>
+                            <h1 className="text-primary-700 font-semibold my-2 group-hover:text-primary-300 duration-200">
+                                {item.title}
+                            </h1>
 
-                        <h1 className="text-xl text-zinc-800 font-semibold my-2 group-hover:text-green-300 duration-200">
-                            {item.title}
-                        </h1>
-
-                        <p className="text-[14px] leading-relaxed text-zinc-500">
-                            {item.text}
-                        </p>
-                    </section>
-                )
-            })}
-        </section>
+                            <p className="text-sm spacing font-inter tracking-wider leading-relaxed text-secondary-500">
+                                {item.text}
+                            </p>
+                        </section>
+                    )
+                })}
+            </section>
+        </Wrapper>
     </Wrapper>
   )
 }

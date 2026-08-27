@@ -8,7 +8,7 @@ type WrapperPropsType = {
 
 const Wrapper = ({children, className} : WrapperPropsType) => {
   return (
-    <section className={cn("w-full mx-auto", className)}>
+    <section className={cn("w-[90%] lg:w-[80%] mx-auto", className)}>
         {children}
     </section>
   )

@@ -1,7 +1,7 @@
 export const navlist = [
     {
-        title: "Tentang",
-        url: "/tentang"
+        title: "Beranda",
+        url: "/"
     },
     {
         title: "Produk",
@@ -17,14 +17,14 @@ export const navlist = [
     },
     {
         title: "Klien",
-        url: "/klien"
+        url: "/client"
     },
     {
-        title: "Projek",
-        url: "/Projek"
-    },
-    {
-        title: "Potfolio",
+        title: "Portfolio",
         url: "/portfolio"
     },
+    {
+        title: "Galeri",
+        url: "/galeri"
+    }
 ]

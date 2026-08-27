@@ -1,48 +1,36 @@
-import Navbar from "@/shared/components/LandingNavbar"
 import {
   HeroSection, 
-  // ClientBeltSection, 
   AboutSection, 
   ServicesSection, 
-  Parallax, 
+  CompayOfferCTA, 
   ProjectsSections,
   ServicesTypeSection,
   ProductSection,
   HomeCTA,
   GallerySection,
   FaqSection,
-  ContactSection,
-  MapsSection,
-  FooterSection} from "@/modules/home/components"
+  ContactSection} from "@/modules/home/components"
 import TestimonialSection from "../components/TestimonialSection"
-import { Wrapper } from "@/shared/components"
+import { FaWhatsapp } from "react-icons/fa6"
 
 const Homepage = () => {
   return (
-    <section className="w-full relative min-h-[900vh] bg-[#f5f7fa]">
-      <Navbar />
+    <section className="w-full relative min-h-[900vh]">
+      <div className="fixed z-100 bg-[#25d366] rounded-full w-18 h-18 top-165 left-350 flex items-center justify-center animate-pulse duration-75">
+        <FaWhatsapp className="w-10 h-10 fill-white" />
+      </div>
       <HeroSection />
-      {/* <ClientBeltSection /> */}
-      <Wrapper className="w-[80%] mx-auto">
-        <AboutSection />
-        <ServicesSection />
-      </Wrapper>
-
-      <Parallax />
-
-      <Wrapper className="w-[80%]">
-        <ProjectsSections />
-        <ServicesTypeSection />
-        <ProductSection />
-        <HomeCTA />
-        <GallerySection />
-        <TestimonialSection />
-        <FaqSection />
-        <ContactSection />
-        <MapsSection />
-      </Wrapper>
-
-      <FooterSection />
+      <AboutSection />
+      <ServicesSection />
+      <CompayOfferCTA />
+      <ProjectsSections />
+      <ServicesTypeSection />
+      <ProductSection />
+      <HomeCTA />
+      <GallerySection />
+      <TestimonialSection />
+      <FaqSection />
+      <ContactSection />
     </section>
   )
 }

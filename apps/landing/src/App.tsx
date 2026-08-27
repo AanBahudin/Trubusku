@@ -1,10 +1,11 @@
-import Homepage from './modules/home/pages/Homepage'
+import { RouterProvider } from 'react-router'
+import landingRouter from '@/routes/LandingRoute'
 
 const App = () => {
   return (
-    <div>
-      <Homepage />
-    </div>
+    <>
+       <RouterProvider router={landingRouter} />
+    </>
   )
 }
 
