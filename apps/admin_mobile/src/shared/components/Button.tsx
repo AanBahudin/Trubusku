@@ -14,9 +14,10 @@ const Button = ({children, variant="default", size='md', style, ...props} : Butt
   return (
     <Pressable
         disabled={variant === 'disabled'}
-        style={[styled.button, buttonSize[size], buttonVariant[variant], style]}  
+        style={[styled.button, buttonSize[size], buttonVariant[variant], style]}
+        {...props}
     >
-        {children}
+      {children}
     </Pressable>
   )
 }

@@ -18,8 +18,7 @@ const LoginPage = () => {
 
         {/* form container */}
         <View style={styles.form_container}>
-          <AppText>Email</AppText>
-          <FormInput Icon={AtSign} placeholder="Masukan email" />
+          <FormInput Icon={AtSign} placeholder="Masukan email" label="Email" />
         </View>
       </View>
     </View>
